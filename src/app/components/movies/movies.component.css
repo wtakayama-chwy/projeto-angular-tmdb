@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container::after {
+    content: "";
+    flex: auto;
+}
+
+.item {
+    width: 16.6%;
+    padding: .5rem;
+    box-sizing: border-box;
+}

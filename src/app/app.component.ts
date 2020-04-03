@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FilmeService } from './filmes/filme/filme.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-navbar';
+  // Always define type 
+  title = 'App-movies';
+  filmes: Object[] = [];
+  // Run at the beggining 
+  // constructor(filmeService: FilmeService){
+  //   filmeService
+  //     .listMoviesNowPlaying()
+  //     .subscribe(filmes => this.filmes = filmes)
+  // }
+
 }

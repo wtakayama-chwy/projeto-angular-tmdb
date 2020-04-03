@@ -1,0 +1,27 @@
+<div class="container-movie">
+    <div class="fadebox">
+        <p class="movie-title">{{ movie.title }}</p>
+        <img class="movie-poster" src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ movie.poster_path }}" alt="movie-title"> 
+    </div>
+    <div class="fadebox-bottom">
+        <p class="release-date">
+            {{ movie.release_date }}
+        </p>
+    </div>
+</div>
+<div class="container-review">
+    <div class="card">
+        <div class="box">
+            <div class="percent">
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+                <div class="number">
+                    <h2>{{ movie.vote_average }}<span>/10</span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

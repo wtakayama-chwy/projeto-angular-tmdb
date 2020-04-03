@@ -1,0 +1,22 @@
+<div class="search">
+    <div class="img-wrapper">
+        <h1>Bem-vindo!</h1>
+        <h2>Uma aplicação simples em ANGULAR, usando as APIs da tmdb.org</h2>
+        <div class="search-bar">
+            <input type="text">
+            <a mat-raised-button color="basic">Buscar</a>
+    </div>
+    </div>
+</div>
+
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Assignee</mat-label>
+      <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option.name}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
