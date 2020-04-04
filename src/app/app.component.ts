@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import { FilmeService } from './filmes/filme/filme.service';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from './services/apiService.service';
+
+import { Movie } from './models/movie';
+import { SearchMovie } from './models/searchMovie';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +10,16 @@ import { FilmeService } from './filmes/filme/filme.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // Always define type 
   title = 'App-movies';
-  filmes: Object[] = [];
-  // Run at the beggining 
-  // constructor(filmeService: FilmeService){
-  //   filmeService
-  //     .listMoviesNowPlaying()
-  //     .subscribe(filmes => this.filmes = filmes)
-  // }
 
+  constructor(private _apiService: ApiService){
+
+  }
+
+  listSearchMovies: SearchMovie[];
+  ngOnInt(){
+    this._apiService.searchMovies()
+      .subscribe(data => this.listSearchMovies = data)
+  }
+  
 }

@@ -1,0 +1,75 @@
+.container-searchMovie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 16.6%;
+    height: 20rem;
+}
+
+.main-info {
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    transition: 0.5s ease-in-out;
+}
+
+.main-info:hover {
+    opacity: 1;
+}
+
+.backdrop {
+    position: relative;
+}
+
+.searchMovie-title {
+    display: flex;
+    flex-flow: column wrap;
+    width: 75%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #f3f3f3;
+    line-height: 1.5em;
+}
+.searchMovie-release-date, .searchMovie-review {
+    font-size: 0.8em;
+    color: #f3f3f3;
+    line-height: 1.0em;
+}
+
+.searchMovie-backdrop {
+    display: flex;
+    max-width: 15rem;
+    height: auto;
+    transition: .25s ease-in-out;
+    cursor: pointer;
+}
+
+.searchMovie-backdrop:hover {
+    opacity: 0.2;
+}
+
+.overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    font-size: 0.9em;
+    color: #f3f3f3;
+    line-height: 1.6em;
+    width: 20%;
+    height: 20rem;
+    text-align: justify;
+    margin-left: 1rem;
+}
+
+@media (max-width:1200px) {
+    .overview {
+        margin-left: 0;
+        width: 90%;
+    }
+}

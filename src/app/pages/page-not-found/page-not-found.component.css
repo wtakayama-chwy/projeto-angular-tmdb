@@ -1,0 +1,21 @@
+.container{
+    margin: 0 auto;
+}
+.error-template{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background-color: #f3f3f3;
+    height: 91vh;
+    line-height: 5.5em;
+}
+.error-details{
+    font-size: 3em;
+}
+.error-actions{
+    font-size: 2em;
+}
+.error-details, .error-actions{
+    color: #212121;
+}

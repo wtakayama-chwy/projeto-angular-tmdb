@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../../models/movie';
+// import { ApiService } from './services/apiService.service';
 
 @Component({
   selector: 'app-movies',
@@ -8,7 +9,7 @@ import { Movie } from '../../models/movie';
 })
 export class MoviesComponent implements OnInit {
 
-  movies: Movie[];
+  movies: Movie[]; // Now playing
 
   constructor() { }
 

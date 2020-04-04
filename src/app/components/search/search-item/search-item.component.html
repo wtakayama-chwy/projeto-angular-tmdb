@@ -1,0 +1,14 @@
+<div class="container-searchMovie">
+    <div class="main-info">
+        <p class="searchMovie-title">{{ searchMovie.original_title }}</p>
+        <p class="searchMovie-release-date">{{ searchMovie.release_date }}</p>
+        <p class="searchMovie-review">{{ searchMovie.vote_average }}</p>
+    </div>
+    <div class="backdrop">
+        <img class="searchMovie-backdrop" src="https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/{{ searchMovie.backdrop_path }}" alt="movie-title">
+    </div>
+</div>
+<div class="overview">
+    <p class="searchMovie-overview">{{ searchMovie.overview }}</p>
+</div>
+
