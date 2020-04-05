@@ -3,8 +3,6 @@
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    width: 16.6%;
-    height: 20rem;
 }
 
 .main-info {
@@ -43,7 +41,7 @@
 
 .searchMovie-backdrop {
     display: flex;
-    max-width: 15rem;
+    max-width: 70vw;
     height: auto;
     transition: .25s ease-in-out;
     cursor: pointer;
@@ -60,9 +58,8 @@
     flex-flow: column wrap;
     font-size: 0.9em;
     color: #f3f3f3;
-    line-height: 1.6em;
+    line-height: 1.8em;
     width: 20%;
-    height: 20rem;
     text-align: justify;
     margin-left: 1rem;
 }

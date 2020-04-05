@@ -1,7 +1,7 @@
 <div class="container-searchMovie">
     <div class="main-info">
         <p class="searchMovie-title">{{ searchMovie.original_title }}</p>
-        <p class="searchMovie-release-date">{{ searchMovie.release_date }}</p>
+        <p class="searchMovie-release-date">{{ searchMovie.release_date | date: 'dd/LL/yyyy'  }}</p>
         <p class="searchMovie-review">{{ searchMovie.vote_average }}</p>
     </div>
     <div class="backdrop">

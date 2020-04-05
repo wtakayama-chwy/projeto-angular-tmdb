@@ -1,4 +1,4 @@
-export class SearchMovie {
+export interface SearchMovie {
 
     id: number; // id
     video: boolean // video

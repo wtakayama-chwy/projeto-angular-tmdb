@@ -11,7 +11,7 @@
 }
 
 .item {
-    width: 16.6%;
-    padding: .5rem;
+    min-width: 16.6%;
+    padding: .35rem;
     box-sizing: border-box;
 }

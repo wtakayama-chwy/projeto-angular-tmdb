@@ -1,0 +1,26 @@
+<div class="popup">
+    <div class="header">
+        <h2 mat-dialog-title>
+            {{ data.original_title }}
+        </h2>
+        <button class="mat-raised-button" (click)="close()">Close</button>
+    </div>
+    <mat-dialog-content>
+        <div class="img-wrapper">
+            <img 
+                src="https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/{{ data.backdrop_path}}" 
+                alt="backdrop-img" 
+                class="backdrop-img"
+            >
+        </div>
+        <div class="content">
+            <h3>Lançamento:<span> {{ data.release_date | date: 'dd/LL/yyyy' }} </span></h3>
+            <h3>Descrição:<span> {{ data.overview }} </span></h3>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-content>
+        <div class="recommendations">
+            
+        </div>
+    </mat-dialog-content>
+</div>    

@@ -11,11 +11,11 @@
 
 .container-movie:nth-child(n){
     background-color: #2A337C;
+    max-width: 15rem; /* Must be equal to your movie-poster width */
 }
 
 .movie-poster {
     display: flex;
-    align-items: top;
     max-width: 15rem;
     height: auto;
     transition: .25s ease-in-out;

@@ -1,23 +1,31 @@
 <div class="container-search">
     <div class="img-wrapper">
-        <h1>Bem-vindo!</h1>
-        <h2>Uma aplicação simples em ANGULAR, usando as APIs da tmdb.org</h2>
+        <h1>Bem-vindo</h1>
+        <h2>Milhões de Filmes, Séries e Pessoas para Descobrir. Explore já.</h2>
         <div class="search-bar">
-            <input #searchField
-                type="text" 
-                placeholder="digite o nome do filme"
-                (keyup.enter)="searchMovie(searchField.value)"
-                (blur)="searchMovie(searchField.value); searchField.value='' "
-            >
-            <a mat-raised-button 
-                color="basic" 
-                routerLink="/busca"
-                (click)="searchMovie(searchField.value)"
-            >
-                Buscar
-            </a>
+
+            <div id="namer">
+                <div id="namer-input">
+                 <input #searchField
+                    type="text" 
+                    name="namername" 
+                    placeholder="Procurando por qual filme?"
+                    required
+                    (keyup.enter)="searchMovie(searchField.value)"
+                    (blur)="searchMovie(searchField.value); searchField.value='' "
+                >
+            </div>
         </div>
-    </div>    
+        <a mat-raised-button 
+        class="search-button"
+        color="basic" 
+        routerLink="/busca"
+        (click)="searchMovie(searchField.value)"
+        >
+            Buscar
+        </a>              
+    </div>
+</div>    
     <app-search-item class="container-item" 
         *ngFor="let searchedMovie of searchedMovies" 
         [searchMovie]="searchedMovie" 

@@ -1,11 +1,15 @@
 <div class="container-movie">
     <div class="fadebox">
         <p class="movie-title">{{ movie.title }}</p>
-        <img class="movie-poster" src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ movie.poster_path }}" alt="movie-title"> 
+        <img class="movie-poster" 
+            src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ movie.poster_path }}" 
+            alt="movie-title"
+            (click)="openModal(movie)"
+        > 
     </div>
     <div class="fadebox-bottom">
         <p class="release-date">
-            {{ movie.release_date }}
+            {{ movie.release_date | date: 'dd/LL/yyyy'  }}
         </p>
     </div>
 </div>
@@ -24,4 +28,3 @@
         </div>
     </div>
 </div>
-

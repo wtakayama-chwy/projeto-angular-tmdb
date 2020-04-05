@@ -15,17 +15,20 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field'; 3
+import { MatDialogModule, MatDialogRef, MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+
 // Components 
-import { MoviesComponent } from './components/movies/movies.component';
-import { MovieItemComponent } from './components/movie-item/movie-item.component';
+import { MoviesComponent } from './components/movies-now-playing/movies.component';
+import { MovieItemComponent } from './components/movies-now-playing/movie-item/movie-item.component';
 import { SearchComponent } from './components/search/search.component';
 // Modules
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Services
-import { ApiService } from './services/apiService.service';
+import { ApiService } from './services/api.service';
 import { SearchItemComponent } from './components/search/search-item/search-item.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { MoviePopupComponent } from './components/movie-popup/movie-popup.component';
 
 
 @NgModule({
@@ -38,6 +41,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     SearchItemComponent,
     routingComponents,
     HomePageComponent,
+    MoviePopupComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,11 +56,16 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     MatIconModule,
     MatInputModule,
     MatToolbarModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDialogModule,
   ],
   providers: [
-    ApiService
+    { provide: MatDialogRef, useValue: {} },
+    { provide: MAT_DIALOG_DATA, useValue: {} },
+    ApiService,
+    MatDialog,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ MoviePopupComponent ]
 })
 export class AppModule { }

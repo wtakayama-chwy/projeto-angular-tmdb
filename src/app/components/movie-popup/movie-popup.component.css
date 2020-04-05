@@ -1,0 +1,45 @@
+.popup {
+    display: flex;
+    flex-flow: column wrap;
+    width: 65vw;
+    height: 85vh;
+}
+
+.popup button {
+    margin-top: -1.5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-wrapper {
+    width: 65vw;
+    height: 300px;
+    overflow: hidden;
+}
+
+.backdrop-img{
+    position: relative;
+    width: 65vw;
+}
+
+.content {
+    width: 65vw;
+    text-align: justify;
+    background-color: #212121;
+    position: absolute;
+    margin-top: -3rem;
+    height: 45vh;
+}
+.content h3 {
+    margin: 1rem 1rem;
+    font-weight: bold;
+}
+
+.content h3 span {
+    font-size: 0.8em;
+    font-weight: normal;
+}
