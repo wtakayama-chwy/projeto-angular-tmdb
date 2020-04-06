@@ -41,7 +41,7 @@
 
 .searchMovie-backdrop {
     display: flex;
-    max-width: 70vw;
+    max-width: 50vw;
     height: auto;
     transition: .25s ease-in-out;
     cursor: pointer;
@@ -64,9 +64,21 @@
     margin-left: 1rem;
 }
 
-@media (max-width:1200px) {
+@media (max-width:1750px) {
     .overview {
         margin-left: 0;
-        width: 90%;
+        width: 47.5%;
+        margin: 0 3em 0 3em;
+        display: block;
     }
+}
+
+@media (max-width: 650px) {
+    .overview{
+        width: 75%;
+    }
+    .searchMovie-backdrop {
+        max-width: 75vw;
+    }
+
 }

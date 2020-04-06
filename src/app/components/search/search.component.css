@@ -88,38 +88,46 @@
     color: #fff;
     position: relative;
     max-width: 400px;
+    width: 40vw;
     margin: auto 0;
 }
 
 #namer input {
- border: 0;
- border-radius: 1em;
- width: 100%;
- font-size: 1.2em;
- height: 2.4em;
- text-align: center;
- padding: 0.6em;
- background: transparent;
-    color: rgb(48, 48, 48);
+    border: 0;
+    border-radius: 1em;
+    width: 100%;
+    font-size: 1.2em;
+    height: 2.4em;
+    text-align: center;
+    padding: 0.6em;
+    background: transparent;
+        color: rgb(48, 48, 48);
 }
 
 #namer input:focus {
- outline: 0;
+    outline: 0;
     color: rgb(48, 48, 48);
 }
 
 #namer input::placeholder {
- color: rgb(173, 175, 177);
+    color: rgb(173, 175, 177);
 }
 
 #namer-input.modern input {
- font-family: 'Raleway', sans-serif;
- text-transform: lowercase;
- font-weight: 300;
- letter-spacing: 10px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: lowercase;
+    font-weight: 300;
+    letter-spacing: 10px;
 }
 
 #namer-input.cheeky input {
- font-family: 'Permanent Marker', cursive;
- font-size: 40px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+}
+
+@media(max-width:630px){
+    .img-wrapper h2 {
+        font-size: 1em;
+        text-align: center;
+    }
 }

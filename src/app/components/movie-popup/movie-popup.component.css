@@ -40,6 +40,22 @@
 }
 
 .content h3 span {
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: normal;
+}
+
+@media(max-width:415px){
+
+    .content{
+        height: 100vh;
+        margin-top: -0.4rem;
+    }
+    .img-wrapper{
+        height: auto;
+    }
+
+    #popup{
+        height: 100vh;
+    }
+
 }

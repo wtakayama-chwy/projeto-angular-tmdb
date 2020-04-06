@@ -1,0 +1,85 @@
+.container-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.img-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.movie-backdrop{
+    position: relative;
+    max-width: 75%;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.movie-backdrop:hover{
+    opacity: 0.2;
+}
+
+.main-info{
+    font-weight: bold;
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+    background-color: #212121;
+    margin-top: -4rem;
+}
+
+.movie-title{
+    background-color: #33BED3;
+    text-align: center;
+    padding: 1rem;
+}
+
+.basic-info{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+.main-content{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    text-align: center;
+}
+
+.overview{
+    display: flex;
+    align-items: center;
+    background-color: #0A0909;
+    min-height: 8rem;
+}
+
+.money-info h3{
+    letter-spacing: .2rem;
+    font-weight: 300;
+}
+
+h1, h3 {
+    color: #f3f3f3;
+    letter-spacing: .1rem;
+    font-weight: 300;
+}
+
+@media(max-width:615px){
+    .main-info{
+        margin-top: 0;
+        text-align: justify;
+    }
+    .main-content{
+        text-align: justify;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+    h3{
+        font-size: 1.1em;
+    }
+}

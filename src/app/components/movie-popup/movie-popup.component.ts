@@ -18,14 +18,12 @@ export class MoviePopupComponent implements OnInit {
     private dialog: MatDialog,
     public dialogRef: MatDialogRef<MoviePopupComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
-  ) {  }
+  ){}
   
   ngOnInit(): void {
-    
   }
 
   close(){
     this.dialogRef.close();
   }
-
 }

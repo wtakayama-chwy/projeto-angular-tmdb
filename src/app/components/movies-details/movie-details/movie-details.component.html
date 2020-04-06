@@ -1,0 +1,21 @@
+<div class="container-details">
+    <div class="img-wrapper">
+        <img class="movie-backdrop" src="https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/{{ movieDetails.backdrop_path }}">
+    </div>
+    <div class="main-info">
+        <h1 class="movie-title">{{ movieDetails.original_title }}</h1>
+        <div class="basic-info">
+            <h3>{{ movieDetails.tagline }}</h3>
+            <h3>Lançamento: {{ movieDetails.release_date | date: 'dd/LL/yyyy' }}</h3>
+            <h3>Língua: {{ movieDetails.original_language }} & Duração: {{ movieDetails.runtime }}min</h3>
+        </div>
+        <div class="main-content">
+            <h3 class="overview">Resumo: {{ movieDetails.overview }}</h3>
+            <div class="money-info">
+                <h3>Receita: {{ movieDetails.revenue | currency }}  &  Orçamento: {{ movieDetails.budget | currency }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-recommendations">
+</div>

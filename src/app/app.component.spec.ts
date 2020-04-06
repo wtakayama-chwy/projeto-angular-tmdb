@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-navbar'`, () => {
+  it(`should have as title 'angular-tmdb'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-navbar');
+    expect(app.title).toEqual('angular-tmdb');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-navbar app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('angular-tmdb app is running!');
   });
 });

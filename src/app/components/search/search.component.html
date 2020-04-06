@@ -6,24 +6,24 @@
 
             <div id="namer">
                 <div id="namer-input">
-                 <input #searchField
+                    <input #query
                     type="text" 
                     name="namername" 
                     placeholder="Procurando por qual filme?"
                     required
-                    (keyup.enter)="searchMovie(searchField.value)"
-                    (blur)="searchMovie(searchField.value); searchField.value='' "
                 >
             </div>
         </div>
         <a mat-raised-button 
         class="search-button"
         color="basic" 
-        routerLink="/busca"
-        (click)="searchMovie(searchField.value)"
+        (click)="searchMovie(query.value)"
+        ng-dblclick="searchMovie(query.value)"
+        [routerLink]="['/busca/', query.value]"
         >
-            Buscar
-        </a>              
+        Buscar
+        </a>
+        <router-outlet></router-outlet>
     </div>
 </div>    
     <app-search-item class="container-item" 

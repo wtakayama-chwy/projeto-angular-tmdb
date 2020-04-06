@@ -1,5 +1,7 @@
 .spacer {
     flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navbar {
@@ -9,4 +11,24 @@
 
 #logo img{
     width: 150px;
+}
+
+@media(max-width:540px){
+    #logo img {
+        width: 25vw;
+    }
+    .navbar{
+        display: flex;
+        flex-flow: column;
+        height: 21vh;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .spacer{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
 }

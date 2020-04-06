@@ -5,9 +5,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-
 import { NavbarComponent } from './components/navbar/navbar.component';
-
 //Angular material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,18 +15,19 @@ import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field'; 3
 import { MatDialogModule, MatDialogRef, MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
-
-// Components 
+//My Components & Services
 import { MoviesComponent } from './components/movies-now-playing/movies.component';
 import { MovieItemComponent } from './components/movies-now-playing/movie-item/movie-item.component';
 import { SearchComponent } from './components/search/search.component';
-// Modules
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// Services
 import { ApiService } from './services/api.service';
 import { SearchItemComponent } from './components/search/search-item/search-item.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { MoviePopupComponent } from './components/movie-popup/movie-popup.component';
+import { MovieDetailsComponent } from './components/movies-details/movie-details/movie-details.component';
+import { MovieDetailsPageComponent } from './pages/movie-details-page/movie-details-page.component';
+import { MovieRecommendationsComponent } from './components/movie-recommendations/movie-recommendations.component';
+import { MovieItemRecommendationsComponent } from './components/movie-recommendations/movie-item-recommendations/movie-item-recommendations.component';
 
 
 @NgModule({
@@ -42,6 +41,10 @@ import { MoviePopupComponent } from './components/movie-popup/movie-popup.compon
     routingComponents,
     HomePageComponent,
     MoviePopupComponent,
+    MovieDetailsComponent,
+    MovieDetailsPageComponent,
+    MovieRecommendationsComponent,
+    MovieItemRecommendationsComponent,
   ],
   imports: [
     BrowserModule,
