@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output  } from '@angular/core';
-import { Movie } from 'src/app/models/movie';
+import { Movies } from 'src/app/shared/models/movies';
 import { MatDialog } from '@angular/material/dialog';
 import { MoviePopupComponent } from '../../movie-popup/movie-popup.component';
 
@@ -16,7 +16,7 @@ export class MovieItemComponent implements OnInit {
   ) 
   { }
 
-  @Input() movie: Movie;
+  @Input() movie: Movies;
   @Output() dialogConfig: any ;
 
   ngOnInit(): void {

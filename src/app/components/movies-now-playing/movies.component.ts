@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from '../../models/movie';
+import { Movies } from '../../shared/models/movies';
 import { ApiService } from '../../services/api.service';
 
 @Component({
@@ -9,14 +9,13 @@ import { ApiService } from '../../services/api.service';
 })
 export class MoviesComponent implements OnInit {
 
-  movies: Movie[] = []; // Now playing
+  movies: Movies[] = []; // Now playing
 
-  constructor(private apiService: ApiService) { }
+  constructor(private _apiService: ApiService) { }
   
   ngOnInit(): void {
-  
-    this.apiService
+    this._apiService
       .getMoviesNowPlaying()
-      .then(res => this.movies = res.results)
+      .subscribe(res => this.movies = res['results']);
   }
 }

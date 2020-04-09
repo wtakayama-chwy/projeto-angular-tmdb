@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { SearchMovie } from 'src/app/models/searchMovie';
+import { Movies } from 'src/app/shared/models/movies';
 
 @Component({
   selector: 'app-search-item',
@@ -8,7 +8,7 @@ import { SearchMovie } from 'src/app/models/searchMovie';
 })
 export class SearchItemComponent implements OnInit {
 
-  @Input() searchMovie: SearchMovie;
+  @Input() searchMovie: Movies;
   @ViewChild('id') id: any;
 
   constructor(

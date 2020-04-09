@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Movie } from 'src/app/models/movie';
+import { Movies } from 'src/app/shared/models/movies';
 import { ApiService } from 'src/app/services/api.service';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -21,12 +21,12 @@ export class SearchComponent implements OnInit {
     private _route: ActivatedRoute
    ) { }
 
-  searchedMovies: Movie[];
+  searchedMovies: Movies[];
   
   searchMovie(searchField: string) {   
       this._apiService
         .searchMovies(searchField)
-        .then(res => this.searchedMovies = res.results);
+        .subscribe(res => this.searchedMovies = res['results']);
   }
 
   ngOnInit(): void {
@@ -38,7 +38,7 @@ export class SearchComponent implements OnInit {
     if (this.query) { // Avoid to render searchcomponent with no query
     this._apiService
         .searchMovies(this.query)
-        .then(res => this.searchedMovies = res.results);
+        .subscribe(res => this.searchedMovies = res['results']);
     }
   }  
 

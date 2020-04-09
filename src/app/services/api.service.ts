@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { SearchMovie } from '../models/searchMovie';
-import { Movie } from '../models/movie';
+import { Movies } from '../shared/models/movies';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
 
+  baseUrl: string = 'https://api.themoviedb.org/3';
   language: string = 'language=pt-BR';
   key: string = 'api_key=32b2538fae9d6a2e14d1539dde85893f';
-  public moviesData: SearchMovie[]
-  nowPlayingUrl: string = `https://api.themoviedb.org/3/movie/now_playing?${this.key}&${this.language}&page=1`;
+  public moviesData: Movies[]
+  nowPlayingUrl: string = `${this.baseUrl}/movie/now_playing?${this.key}&${this.language}&page=1`;
 
   constructor(
     private http: HttpClient,
@@ -30,20 +30,30 @@ export class ApiService {
   }
 
   */
+
+  getMoviesNowPlaying(){
+    return this.http 
+      .get<Movies[]>(this.nowPlayingUrl);
+  }
+
+  /* FETCH METHOD
   getMoviesNowPlaying(){
     return fetch(this.nowPlayingUrl)
       .then(response => response.json())
       .catch(error => console.log(error));
   }
-
   searchMovies(query: string){
-
-    const searchUrl: string = 
-    `https://api.themoviedb.org/3/search/movie?${this.key}&${this.language}&query=${query}&page=1&include_adult=false`;
-    
+    const searchUrl: string = `${this.baseUrl}/search/movie?${this.key}&${this.language}&query=${query}&page=1&include_adult=false`;
     return fetch(searchUrl)
       .then(response => response.json())
       .catch(error => console.log(error));
+  }
+  */
+
+  searchMovies(query: string){   
+    const searchUrl: string = `${this.baseUrl}/search/movie?${this.key}&${this.language}&query=${query}&page=1&include_adult=false`; 
+    return this.http
+      .get<Movies[]>(searchUrl);
   }
 
   async getMoviesRecommendations(id){

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatDialogRef } from "@angular/material/dialog";
-import { Movie } from 'src/app/models/movie';
+import { Movies } from 'src/app/shared/models/movies';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class MoviePopupComponent implements OnInit {
   
-  @Input() movieObject: Movie;
+  @Input() movieObject: Movies;
 
   constructor(
     public apiService: ApiService,

@@ -1,14 +1,14 @@
-.container {
-    display: flex;
-    flex-flow: row wrap;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 16rem);
     justify-content: space-around;
     align-items: center;
 }
 
-.container::after {
+/* .container::after {
     content: "";
     flex: auto;
-}
+} */
 
 .item {
     min-width: 16.6%;
@@ -17,7 +17,7 @@
 }
 
 @media(max-width:440px){
-    .container::after{
+    /* .container::after{
         margin-left: 12em;
-    }
+    } */
 }
